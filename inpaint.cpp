@@ -24,8 +24,8 @@ int main(int argc, char* argv[])
     mask = imread(argv[2]);
     if(!src.data || !mask.data){return -1;}
     //Experimental resize!
-    //resize(src, src, Size(0,0), 0.5, 0.5);
-    //resize(mask, mask, Size(0,0), 0.5, 0.5);
+//    resize(src, src, Size(0,0), 0.5, 0.5);
+//    resize(mask, mask, Size(0,0), 0.5, 0.5);
     src.copyTo(inpaint_me, mask);// inpaint_me is a bgr mat
     cvtColor(inpaint_me, inpaint_me, CV_BGR2Lab);//inpaint_me is now in Lab space
 

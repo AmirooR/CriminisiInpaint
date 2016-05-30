@@ -1,0 +1,3 @@
+1. Range defined for Point start may go outside of the image!
+2. I should compute gradient with considering the mask at each iteration
+
