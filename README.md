@@ -13,12 +13,12 @@ image](https://raw.github.com/AmirooR/CriminisiInpaint/master/elephant-input.png
 * Elephant mask
 
 ![elephant
-mask](https://raw.github.com/AmirooR/CriminisiInpaint/elephant-mask.png)
+mask](https://raw.github.com/AmirooR/CriminisiInpaint/master/elephant-mask.png)
 
 * Elephant inpainted
 
 ![elephant
-inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/elephant-inpaint.png)
+inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/master/elephant-inpaint.png)
 
 * Ship image
 
@@ -28,9 +28,9 @@ image](https://raw.github.com/AmirooR/CriminisiInpaint/master/ship-input.png)
 * Ship mask
 
 ![ship
-mask](https://raw.github.com/AmirooR/CriminisiInpaint/ship-mask.png)
+mask](https://raw.github.com/AmirooR/CriminisiInpaint/master/ship-mask.png)
 
 * Ship inpainted
 
 ![ship
-inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/ship-inpaint.png)
+inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/master/ship-inpaint.png)
