@@ -30,7 +30,7 @@ image](https://raw.github.com/AmirooR/CriminisiInpaint/master/ship-input.png)
 ![ship
 mask](https://raw.github.com/AmirooR/CriminisiInpaint/master/ship-mask.png)
 
-* Ship inpainted
+* Ship inpainted (Resized!)
 
 ![ship
 inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/master/ship-inpaint.png)
