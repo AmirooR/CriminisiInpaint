@@ -7,8 +7,8 @@
 using namespace std;
 using namespace cv;
 
-int win_size = 5;
-int stride = 2;
+int win_size = 9;
+int stride = 3;
 
 int main(int argc, char* argv[])
 {
@@ -24,8 +24,8 @@ int main(int argc, char* argv[])
     mask = imread(argv[2]);
     if(!src.data || !mask.data){return -1;}
     //Experimental resize!
-    resize(src, src, Size(0,0), 0.5, 0.5);
-    resize(mask, mask, Size(0,0), 0.5, 0.5);
+    //resize(src, src, Size(0,0), 0.5, 0.5);
+    //resize(mask, mask, Size(0,0), 0.5, 0.5);
     src.copyTo(inpaint_me, mask);// inpaint_me is a bgr mat
     cvtColor(inpaint_me, inpaint_me, CV_BGR2Lab);//inpaint_me is now in Lab space
 
@@ -145,7 +145,7 @@ int main(int argc, char* argv[])
                 min_dist_idx = y;
             }
         }
-        cerr<<"min_dist: "<<min_dist<<", idx: "<<min_dist_idx<<endl;
+        //cerr<<"min_dist: "<<min_dist<<", idx: "<<min_dist_idx<<endl;
         
         Point fill_me = contours[max_c_idx][max_p_idx];
 
