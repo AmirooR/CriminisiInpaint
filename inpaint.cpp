@@ -37,8 +37,6 @@ int main(int argc, char* argv[])
     src_gray.convertTo(src_gray_f, CV_32FC1, 1./255.);
     Sobel(src_gray_f, grad_x, CV_32F, 1, 0, 3, 1, 0, BORDER_DEFAULT);
     Sobel(src_gray_f, grad_y, CV_32F, 0, 1, 3, 1, 0, BORDER_DEFAULT);
-    // imshow("img*mask", inpaint_me);
-    // waitKey(0);
 
 
     // create patches inside I - \omega, and find boundary
@@ -87,7 +85,6 @@ int main(int argc, char* argv[])
         findContours(not_filled, contours, CV_RETR_LIST, CV_CHAIN_APPROX_NONE);
 
         // find pixel with the highest priority
-        //cerr<<"Finding highest priority pixel!"<<endl;
         float max_p_p = -1;
         int max_c_idx = -1;
         int max_p_idx = -1;
@@ -115,12 +112,9 @@ int main(int argc, char* argv[])
 
             }
         }
-        //cerr<<"Max priority: "<<max_p_p<<", @"<<contours[max_c_idx][max_p_idx]<<endl;
 
         // find min distance
-        //cerr<<"Finding min distance..."<<endl;
         Point start = contours[max_c_idx][max_p_idx] - Point(win_size/2, win_size/2);
-        //cerr<<"Start: "<<start<<endl;
         Mat max_mask_patch = filled(Range(start.y, start.y+win_size), Range(start.x, start.x+win_size) ).clone();
         Mat max_patch_mat  = inpaint_me(Range(start.y, start.y+win_size),Range(start.x, start.x+win_size) ).clone();
 
@@ -145,16 +139,15 @@ int main(int argc, char* argv[])
                 min_dist_idx = y;
             }
         }
-        //cerr<<"min_dist: "<<min_dist<<", idx: "<<min_dist_idx<<endl;
         
         Point fill_me = contours[max_c_idx][max_p_idx];
 
         filled.at<uchar>(fill_me) = 255;
-        //for(int r = 0; r < 3; r++)
-        //    inpaint_me.at<Vec3b>(fill_me)[r] = patches.at<uchar>(min_dist_idx, (win_size*win_size/2)*3 + r);
         inpaint_me.at<Vec3b>(fill_me) = patches.at<Vec3b>(min_dist_idx, (win_size*win_size/2));
         iter++;
         cout<<"Iter: "<<iter<<endl;
+
+        //Save temporary results in save/ folder
         if(iter % 100 == 0)
         {
             Mat temp = inpaint_me.clone();
