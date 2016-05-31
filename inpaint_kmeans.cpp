@@ -157,7 +157,7 @@ int main(int argc, char* argv[])
     Mat centers;
     cluster_count = (int)sqrt(num_patches);
 
-    cout<<"Running kmeans ... ";
+    cout<<"Running kmeans ... "<<flush;
     kmeans(patches, cluster_count, labels, TermCriteria(CV_TERMCRIT_ITER|CV_TERMCRIT_EPS, numKmeansIteration, eps), attemps, KMEANS_PP_CENTERS, centers);
     cout<<"Done!"<<endl;
     vector<int>*  centerToRowsMap = new vector<int>[cluster_count];//TODO: delete

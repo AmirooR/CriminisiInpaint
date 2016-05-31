@@ -9,32 +9,32 @@ These are some examples:
 * Elephant image
 
 ![elephant
-image](https://raw.github.com/AmirooR/CriminisiInpaint/master/elephant-input.png)
+image](https://raw.github.com/AmirooR/CriminisiInpaint/master/images/elephant-input.png)
 
 * Elephant mask
 
 ![elephant
-mask](https://raw.github.com/AmirooR/CriminisiInpaint/master/elephant-mask.png)
+mask](https://raw.github.com/AmirooR/CriminisiInpaint/master/images/elephant-mask.png)
 
 * Elephant inpainted
 
 ![elephant
-inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/master/elephant-inpaint.png)
+inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/master/images/elephant-inpaint.png)
 
 * Ship image
 
 ![ship
-image](https://raw.github.com/AmirooR/CriminisiInpaint/master/ship-input.png)
+image](https://raw.github.com/AmirooR/CriminisiInpaint/master/images/ship-input.png)
 
 * Ship mask
 
 ![ship
-mask](https://raw.github.com/AmirooR/CriminisiInpaint/master/ship-mask.png)
+mask](https://raw.github.com/AmirooR/CriminisiInpaint/master/images/ship-mask.png)
 
 * Ship inpainted (Resized!)
 
 ![ship
-inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/master/ship-inpaint.png)
+inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/master/images/ship-inpaint.png)
 
 Kmeans
 ------
@@ -42,5 +42,5 @@ Kmeans
 * Elephant inpainted
 
 ![elephant
-inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/master/elephant_kmeans.png)
+inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/master/images/elephant_kmeans.png)
 
