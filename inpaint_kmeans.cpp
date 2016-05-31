@@ -14,7 +14,7 @@ int win_size = 9;
 int stride = 3;
 
 //kmeans parameters
-int cluster_count = 100;
+int cluster_count = 100; // will change!
 int attemps = 1;
 int numKmeansIteration = 10000;
 float eps = 0.00001;
@@ -28,23 +28,28 @@ Mat make_unique(Mat allPairs)
     int nCols = allPairs.cols * channels;
 
     //TODO if do it for continuous mats!
-    if (allPairs.isContinuous())
+    /*if (allPairs.isContinuous())
     {
         nCols *= nRows;
         nRows = 1;
-    }
+    }*/
 
     for (int i = 1; i < allPairs.rows; ++i) {
+        //cout<<"allPairs.row: "<<i<<endl;
         int isInside = false;
         uchar* p;
         uchar* q;
-        for (int j = 0; j < nRows; ++j) {
+        for (int j = 0; j < uniqueStrides.rows; ++j) {
+            //cout<<"uS.row: "<<j<<endl;
             int count = 0;
             p = allPairs.ptr<uchar>(i);
             q = uniqueStrides.ptr<uchar>(j);
             for (int k = 0; k < nCols; ++k) // checks by element of 
+            {
+               // cout<<"Col: "<<k<<endl;
                 if(p[k] == q[k]) 
                     ++count;
+            }
             if (count == nCols) {
                 isInside = true;
                 break;
@@ -52,6 +57,7 @@ Mat make_unique(Mat allPairs)
         }
         if (isInside == false) uniqueStrides.push_back( allPairs.row(i) );
     }
+    cout<<"Done!"<<endl;
 
     return uniqueStrides;
 }
@@ -149,6 +155,7 @@ int main(int argc, char* argv[])
     patches = rand_select_and_shuffle(patches, num_patches);
     Mat labels;
     Mat centers;
+    cluster_count = (int)sqrt(num_patches);
 
     cout<<"Running kmeans ... ";
     kmeans(patches, cluster_count, labels, TermCriteria(CV_TERMCRIT_ITER|CV_TERMCRIT_EPS, numKmeansIteration, eps), attemps, KMEANS_PP_CENTERS, centers);

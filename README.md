@@ -1,7 +1,8 @@
 Criminisi image inpainting
 ==========================
 
-Image completion based on Criminisi's 2004 IEEE TIP paper with OpenCV.
+Image completion based on Criminisi's 2004 IEEE TIP paper with OpenCV. Also
+contains a faster version with Kmeans search.
 
 These are some examples:
 
@@ -34,3 +35,12 @@ mask](https://raw.github.com/AmirooR/CriminisiInpaint/master/ship-mask.png)
 
 ![ship
 inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/master/ship-inpaint.png)
+
+Kmeans
+------
+
+* Elephant inpainted
+
+![elephant
+inpainted](https://raw.github.com/AmirooR/CriminisiInpaint/master/elephant_kmeans.png)
+
